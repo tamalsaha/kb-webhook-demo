@@ -1,0 +1,20 @@
+# permissions for end users to view workflows.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: workflow-viewer-role
+rules:
+- apiGroups:
+  - module.x-helm.dev
+  resources:
+  - workflows
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - module.x-helm.dev
+  resources:
+  - workflows/status
+  verbs:
+  - get

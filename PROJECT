@@ -1,0 +1,17 @@
+domain: x-helm.dev
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: kb-webhook-demo
+repo: github.com/tamalsaha/kb-webhook-demo
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: x-helm.dev
+  group: module
+  kind: Workflow
+  path: github.com/tamalsaha/kb-webhook-demo/apis/module/v1alpha1
+  version: v1alpha1
+version: "3"
